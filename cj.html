@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="prism.css">
+        <script src="prism.js"></script> 
+  <title>Let's Copy</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+    .topnav{
+    
+    background-color: rgb(34,34,34);
+
+    --bs-navbar-padding-x: 0;
+    --bs-navbar-padding-y: 1.5rem;
+    --bs-navbar-color: rgba(var(--bs-emphasis-color-rgb), 0.65);
+    --bs-navbar-hover-color: rgba(var(--bs-emphasis-color-rgb), 0.8);
+    --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
+    --bs-navbar-active-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    --bs-navbar-brand-padding-y: 0.3125rem;
+    --bs-navbar-brand-margin-end: 1rem;
+    --bs-navbar-brand-font-size: 1.25rem;
+    --bs-navbar-brand-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    --bs-navbar-brand-hover-color: rgba(var(--bs-emphasis-color-rgb), 1);
+    --bs-navbar-nav-link-padding-x: 0.5rem;
+    --bs-navbar-toggler-padding-y: 0.25rem;
+    --bs-navbar-toggler-padding-x: 0.75rem;
+    --bs-navbar-toggler-font-size: 1.25rem;
+    --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2833, 37, 41, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    --bs-navbar-toggler-border-color: rgba(var(--bs-emphasis-color-rgb), 0.15);
+    --bs-navbar-toggler-border-radius: 0.375rem;
+    --bs-navbar-toggler-focus-width: 0.25rem;
+    --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+}
+    
+     .topnav a{
+                font-size: 40px;
+                text-align: center;
+                display:block;
+                 margin:0 auto;
+                 color:white;
+                 text-decoration: none;
+            }
+          .topnav a:link {
+                color:white;
+                 text-decoration: none;
+}
+
+.topnav a:visited {
+    color:white;
+                 text-decoration: none;
+}
+
+.topnav a:hover {
+    color:white;
+                 text-decoration: none;
+}
+
+.topnav a:active {
+    color:white;
+    text-decoration: none;
+}
+.jumbotron{
+  background-image: url('earth.jpg'); 
+  height:600px; background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; position: relative; display:flex;align-items: center;justify-content: center;
+}
+.navbar-toggle{
+    position: absolute;
+    top: -69px;
+    left: 15px;
+}
+@media only screen and (max-width: 600px) {
+            body {
+                font-size: 22px;
+            }
+            
+            }
+
+.icon-bar{
+        color:white; background-color:white;
+      }
+
+  </style>
+</head>
+<body>
+<nav class="topnav">
+    <a href="#">Let's Copy</a>
+</nav>
+
+<nav class="navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+       
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="#">Home</a></li>
+          
+          <li><a href="?page=cj">Core Java</a></li>
+          <li><a href="?page=cga">Computer Graphics & Animation</a></li>
+          <li><a href="pdf/se.pdf" download>Software Engineering</a></li>
+          <li><a href="pdf/cost.pdf" download>Computer Oriented Statistical Technique</a></li>
+          <li><a href="?page=ies">Intoduction to Embedded System</a></li>
+        </ul>
+        
+      </div>
+    </div>
+  </nav>
+
+  <h3>Practical 1. Java Basics</h3>
+  <h4>Program :1 Write a Java program that takes a number as
+input and prints its multiplication table up to 10.
+  </h4>
+<pre><code class="language-java"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+import java.util.Scanner;
+public class table
+{
+public static void main(String[] args)
+{
+Scanner in = new Scanner(System.in);
+System.out.print("Input a number:
+");
+int num1 = in.nextInt();
+
+for (int i=0; i< 10; i++)
+{
+System.out.println(num1 + " x " +
+(i+1) + " = " + (num1 * (i+1)));
+}
+}
+}
+</code></pre>
+  <h4>Program :2 Write a Java program to display
+the following pattern.
+*****
+****
+***
+**
+* 
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+
+import java.util.Scanner;
+public class Edureka
+{
+public static void main(String[] args)
+{
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter the number of
+rows: ");
+int rows = sc.nextInt();
+for (int i= 0; i<= rows-1 ; i++)
+{
+for (int j=0; j<=i; j++)
+{
+System.out.print(" ");
+}
+for (int k=0; k<=rows-1-i; k++)
+{
+System.out.print("*" + " ");
+}
+System.out.println();
+}
+sc.close();
+}
+}
+
+
+</code></pre>
+  <h4>Program :3 Write a Java program to print the
+area and perimeter of a circle.
+
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+public class Exercise11 {
+private static final double radius = 7.5;
+public static void main(String[] args) {
+double perimeter = 2 * Math.PI *
+radius;
+double area = Math.PI * radius *
+radius;
+System.out.println("Perimeter is = "
++ perimeter);
+System.out.println("Area is = " +
+area);
+}
+}
+
+</code></pre>
+
+
+<h3>Practical 2 :Use of Operators</h3>
+  <h4>Program 4 :Write a java program to add two binary numbers.
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+import java.util.Scanner;
+public class pract4
+{
+public static void main(String s[])
+{
+long l1,l2;
+int i=0,rem =0;
+int sum[] = new int[20];
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter first Binary Number");
+l1=sc.nextLong();
+System.out.println("Enter second Binary Number");
+l2=sc.nextLong();
+while(l1!=0 || l2!=0)
+{
+sum[i++]=(int)((l1%10 +l2%10 + rem)%2);
+rem=(int)((l1%10 +l2%10 + rem)/2);
+l1=l1/10;
+l2=l2/10;
+}
+if (rem!=0)
+{
+sum[i++] = rem;
+}
+--i;
+System.out.println("sum of l1 +l2 = ");
+while(i>=0)
+{
+System.out.println(sum[i--]);
+}
+}
+}
+
+</code></pre>
+
+
+  <h4>Program 5: Write a java program to convert a decimal number to Binary
+number.
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+import java.util.Scanner;
+class pract5
+{
+public static void main(String s[])
+{
+int num1;
+String num2;
+Scanner sc = new Scanner(System.in);
+System.out.println(&quot;Enter Binary number:&quot;);
+num2= sc.nextLine();
+System.out.println(&quot;Enter Decimal number:&quot;);
+num1= sc.nextInt();
+System.out.println(&quot;Binary to Decimal : &ldquo;Integer.parseInt(num2,2));
+System.out.println(&quot;Decimal to Binary :&quot;+Integer.toBinaryString(num1));
+}
+}
+
+</code></pre>
+
+  <h4>Program 6: Write a java program to reverse a string.
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+
+import java.util.*;
+class pract6
+{
+public static void main(String s[])
+{
+String s1,t=&quot;&quot;;
+Scanner sc = new Scanner(System.in);
+System.out.println(&quot;Enter a string:&quot;);
+s= sc.nextLine();
+int length = s.length();
+for(int i=length-1;i&gt;=0;i--)
+{
+t=t+s.charAt(i);
+}
+System.out.println(&quot;Reverse String is: &quot;+t);
+}
+}
+
+</code></pre>
+
+
+<h3>PRACTICAL 3: JAVA DATATYES</h3>
+  <h4>Program 7: Write a java program to count the letters, spaces, numbers
+and other characters of a string.
+
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+
+import java.util.Scanner;
+public class pract7
+{
+public static void main(String s[])
+{
+String st;
+Scanner sc = new Scanner(System.in);
+System.out.println(&quot;Enter a string:&quot;);
+st= sc.nextLine();
+count(st);
+}
+public static void count(String x)
+{
+char ch[]=x.toCharArray();
+int l=0,s=0,n=0,a=0;
+for(int i=0;i&lt;x.length();i++)
+{
+if(Character.isLetter(ch[i]))
+{
+l++;
+}
+else if(Character.isDigit(ch[i]))
+{
+n++;
+}
+else if(Character.isSpaceChar(ch[i]))
+{
+s++;
+}
+else
+{
+a++;
+}
+}
+System.out.println(&quot;letter :&quot; + l);
+System.out.println(&quot;numbers :&quot; + n);
+System.out.println(&quot;Space :&quot; + s);
+System.out.println(&quot;other :&quot; + a);
+}
+}
+</code></pre>
+
+
+  <h4>Program 8: Implement a java fuction that calculates the sum of digits for a
+given char array consisting of the digits ‘0’ to ’9’. The function should
+return the digit sum as a long value.
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+
+
+import java.util.Scanner;
+public class pract8
+{
+public static long calc()
+{
+long x=0L;
+char c[]={'0','1','2','3','4','5','6','7','8','9'};
+long sum=0L;
+for (int i=c.length-1;i&gt;=0;i--)
+{
+x=c[i]-'0'; //ascii code for '0' is 48.
+sum=sum+x;
+}
+return sum;
+}
+public static void main(String s[])
+{
+int r = calc();
+System.out.println(&quot;integer is &quot; + r);
+}
+}
+
+
+</code></pre>
+  <h4>Program 9: find the smallest and largest element from the array.
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+
+
+import java.util.Scanner;
+public class pract9
+{
+public static void main(String s1[])
+{
+int n[] =new int[]{13,22,27,11,4};
+int s = n[0];
+int g = n[1];
+int i;
+for(i=0;i&lt;n.length;i++)
+{
+System.out.println(n[i]);
+}
+for(i=1;i&lt;n.length;i++)
+{
+if(n[i]&gt;g)
+{
+g=n[i];
+}
+else if(n[i]&lt;s)
+{
+s=n[i];
+}
+}
+System.out.println(&quot;largest number in array is: &quot;+g);
+System.out.println(&quot;smallest number in array is: &quot;+s);
+}
+}
+
+</code></pre>
+<h3>Practical 4</h3>
+  <h4>Program : 10 Designed a class SortData that contains the method
+asec() and desc().
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+
+
+class SortData
+{
+int n,temp,i,j;
+public void desc(int num[])
+{
+for(i=0;i&lt;num.length;i++)
+{
+for(j=i+1;j&lt;num.length;j++)
+{
+if(num[i]&lt;num[j])
+{
+temp= num[i];
+num[i]=num[j];
+num[j]= temp;
+}
+}
+}
+System.out.println(&quot;Desceding Order:&quot;)
+for (i=0;i&lt;num.length;i++)
+{
+System.out.println(num[i] + &quot; &quot;);
+}
+}
+public void asec(int num1[])
+{
+for(i=0;i&lt;num1.length;i++)
+{
+for(j=i+1;j&lt;num1.length;j++)
+{
+if(num1[i]&gt;num1[j])
+{
+temp= num1[i];
+num1[i]=num1[j];
+num1[j]= temp;
+}
+}
+}
+System.out.println(&quot;Desceding Order:&quot;)
+for (i=0;i&lt;num.length;i++)
+{
+System.out.println(num1[i] + &quot; &quot;);
+}
+}
+}
+public class pract10
+{
+public static void main(String s[])
+{
+SortData s1= new SortData();
+int ar[]= new int[][13,22,27,11,4];
+s1.asec(ar);
+s1.desc(ar);
+}
+}
+</code></pre>
+
+
+  <h4>Practical : 11 Designed a class that demonstrates the use of
+constructor and destructor.
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+
+public class pract11
+{
+public pract11()
+{
+System.out.println(&quot;hello&quot;);
+}
+public void finalize()
+{
+System.out.println(&quot;Destroyed&quot;);
+}
+public static void main(String s[])
+{
+pract11 s1= new pract11();
+s1=null;
+System.gc();
+}
+}
+
+</code></pre>
+
+  <h4>Program :12 Write a java program o demonstrate the implementation of
+abstract class.
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+
+abstract class Calc
+{
+public abstract int sqr(int n1);
+public abstract int sqr(int n1);
+public void show()
+{
+System.out.println("hello");
+}
+}
+public pract12 extends Calc
+{
+public int sqr(int n1)
+{
+return n1*n1;
+}
+public int cube(int n1)
+{
+return n1*n1*n1;
+}
+public static void main(String s[])
+{
+pract12 st = new pract12();
+System.out.println(st.sqr(3));
+System.out.println(st.cube(4));
+st.show();
+}
+}
+
+
+
+</code></pre>
+<h3>Practical – 5</h3>
+  <h4>Program : 13 Write a java program to implement single level
+inheritance.
+
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+class Demo
+{
+float pi=3.14;
+void show()
+{
+System.out.println("area of circle");
+}
+}
+class pract13 extends Demo
+{
+float r= 2.0;
+void area()
+{
+System.out.println("pi*r*r");
+}
+public static void main(String s[])
+{
+pract13 p= new pract13();
+p.show();
+p.area();
+}
+}
+
+
+</code></pre>
+
+  <h4>Program : 14 Write a java program to implement method overriding.
+
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+
+
+class A
+{
+void show()
+{
+System.out.println("Base Class");
+}
+}
+class B extends A
+{
+void show()
+{
+System.out.println("Derived Class");
+}
+}
+class pract14
+{
+public static void main(String s[])
+{
+B b1= new B();
+b1.show();
+}
+}
+
+</code></pre>
+
+  <h4>Program : 15 Write a java program to implement multiple
+inheritance.
+
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+interface S
+{
+public void show();
+}
+interface T extends S
+{
+public void display();
+}
+class pract15 implements T
+{
+public void show()
+{
+System.out.println("From interface S");
+}
+public void display()
+{
+System.out.println("From interface T");
+}
+public static void main(String s[])
+{
+pract15 r= new pract15();
+r.show();
+r.display();
+}
+}
+
+</code></pre>
+<h3>Practical – 6</h3>
+  <h4>Program :15 Create a package , Add the necessary classes and
+import the package in the java class.
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+//In Package mathematics
+package mathematics;
+public class mathmethods
+{
+public static float sqr(float n)
+{
+return n*n;
+}
+public static int sqr(int n)
+{
+return n*n;
+}
+public static double sqr(double n)
+{
+return n*n;
+}
+public static long sqr(long n)
+{
+return n*n;
+}
+}
+In package mypackage
+import java.io.*;
+import mathematics.mathmethods;
+class sqr
+{
+public static void main(String s[])
+{
+int a;
+a=2;
+int b=mathmethods.sqr(a);
+System.out.println("Square is "+ b);
+}
+}
+
+</code></pre>
+
+  <h4>Program :16 Write a java program to add two matrices and
+print the resultant matrix.
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+class pract16
+{
+public static void main(String s[])
+{
+int a[][]={{1,2},{3,4}};
+int b[][]={{5,6},{7,8}};
+int c[][]= new int[2][2];
+int i,j;
+System.out.println(&quot;Matrix A&quot;);
+for (i=0;i&lt;2;i++)
+{
+for(j=0;j&lt;2;j++)
+{
+System.out.print(a[i][j]+ &quot; &quot;);
+}
+System.out.println();
+}
+System.out.println(&quot;MAtrix B&quot;);
+for (i=0;i&lt;2;i++)
+{
+for(j=0;j&lt;2;j++)
+{
+System.out.print(b[i][j]+ &quot; &quot;);
+}
+System.out.println();
+}
+System.out.println(&quot;MAtrix A+B&quot;);
+for (i=0;i&lt;2;i++)
+{
+for(j=0;j&lt;2;j++)
+{
+c[i][j]=a[i][j]+b[i][j];
+System.out.print(c[i][j] + &quot; &quot;);
+}
+System.out.println();
+}
+}
+}
+
+</code></pre>
+
+  <h4>Program 17: Write a java program for multiplying two matrices
+and print the product for the same.
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+class pract17
+{
+public static void main(String s[])
+{
+int a[][]={{1,2},{3,4}};
+int b[][]={{5,6},{7,8}};
+int d[][]= new int[2][2];
+int i,j,k;
+System.out.println(&quot;Matrix A&quot;);
+for (i=0;i&lt;2;i++)
+{
+for(j=0;j&lt;2;j++)
+{
+System.out.print(a[i][j]+ &quot; &quot;);
+}
+System.out.println();
+}
+System.out.println(&quot;MAtrix B&quot;);
+for (i=0;i&lt;2;i++)
+{
+for(j=0;j&lt;2;j++)
+{
+System.out.print(b[i][j]+ &quot; &quot;);
+}
+System.out.println();
+}
+System.out.println(&quot;MAtrix A* B&quot;);
+for (i=0;i&lt;2;i++)
+{
+for(j=0;j&lt;2;j++)
+{
+for(k=0;k&lt;2;k++)
+{
+d[i][j] = d[i][j] + a[i][k] * b[k][j];
+}
+System.out.print(d[i][j]+&quot; &quot;);
+}
+System.out.println();
+}
+}
+}
+
+</code></pre>
+<h3>PRACTICAL 7
+</h3>
+  <h4>Program 18: Write a java program to implement the vectors.
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+
+
+import java.util.Vector;
+public class pract18
+{
+public static void main(String s[])
+{
+Vector&lt;String&gt; v= new Vector&lt;String&gt;();
+v.add(&quot;red&quot;);
+v.add(&quot;green&quot;);
+v.add(&quot;blue&quot;);
+System.out.println(v);
+v.add(2,&quot;yellow&quot;);
+System.out.println(v);
+System.out.println(&quot;element at 3ed position&quot; + v.get(3));
+System.out.println(&quot;First element&quot; + v.firstElement());
+System.out.println(&quot;last element&quot; + v.lastElement());
+System.out.println(&quot;Is this vector empty?&quot; + v.isEmpty());
+}
+}
+</code></pre>
+
+
+
+  <h4>Progarm :20 Write a java program to implement Thread
+lifecycle.
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+
+
+
+import java.lang.*;
+public class pract20 extends Thread
+{
+public static void main(String s[]) throws Exception
+{
+System.out.println(Thread.currentThread().getName());
+for(int i=0;i&lt;10;i++)
+{
+new Thread(&quot;&quot;+i)
+{
+public void run()
+{
+System.out.println(&quot;Thread :&quot; +getName() + &quot;running&quot;);
+}
+}.start();
+}
+}
+
+</code></pre>
+
+  <h4>Program 21: Write a java program to implement multithreading.
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+
+
+
+import java.io.*;
+class A extends Thread
+{
+public void run()
+{
+System.out.println(&quot;Start A&quot;);
+for (int i =1;i&lt;=5;i++)
+{
+System.out.println(&quot;Thread A is:&quot;+ i);
+}
+System.out.println(&quot;Exit A&quot;);
+}
+}
+class B extends Thread
+{
+public void run()
+{
+System.out.println(&quot;Start B&quot;);
+for (int j =1;j&lt;=5;j++)
+{
+System.out.println(&quot;Thread B is:&quot;+ j);
+}
+System.out.println(&quot;Exit B&quot;);
+}
+}
+class C extends Thread
+{
+public void run()
+{
+System.out.println(&quot;Start C&quot;);
+for (int k =1;k&lt;=5;k++)
+{
+System.out.println(&quot;Thread C is:&quot;+ k);
+}
+System.out.println(&quot;Exit C&quot;);
+}
+}
+class D extends Thread
+{
+public void run()
+{
+System.out.println(&quot;start D&quot;);
+for (int l =1;l&lt;=5;l++)
+{
+System.out.println(&quot;Thread D is:&quot;+ l);
+}
+System.out.println(&quot;Exit D&quot;);
+}
+}
+class pract21
+{
+public static void main(String s[])
+{
+new A().start();
+new B().start();
+new C().start();
+new D().start();
+}
+}
+
+</code></pre>
+<h3>PRACTICAL 8</h3>
+  <h4>
+Program 22: Write a java program to open a file and display the
+contents in the console window.
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+
+import java.io.*;
+public class pract22
+{
+public static void main(String s[]) throws IOException
+{
+InputStream input = new FileInputStream("");
+DataInputStream inst = new DataInputStream(input);
+int count = input.available();
+byte[] a = new byte[count];
+inst.read(a);
+for (byte b:a)
+{
+char k= (char) b;
+System.out.println(k+"-");
+}
+}
+}
+
+
+</code></pre>
+
+<h4>Program 23: Write a java program to copy the contents
+from one file to other file.
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+
+import java.io.*;
+public class pract23
+{
+public static void main(String s[])
+{
+FileInputStream instream = null;
+FileOutputStream outstream = null;
+try {
+File inF = new File("");
+File outF = new File("");
+instream= new FileInputStream(inF);
+outstream= new FileOutputStream(outF);
+byte[] buffer = new byte[1024];
+int length;
+while ((length=instream.read(buffer))>0)
+{
+outstream.write(buffer, 0, length);
+}
+instream.close();
+outstream.close();
+System.out.println("Done!");
+} catch (Exception e) {
+// TODO: handle exception
+e.printStackTrace();
+}
+}
+}
+</code></pre>
+
+<h4>Program 24: Write a java program to read the student data from
+user and store it in the file.
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+
+import java.io.*;
+import java.util.Scanner;
+import java.io.*;
+import java.util.Scanner;
+class pract24
+{
+public static void main(String args[]) throws IOException
+{
+String s1,s2,s3;
+Scanner st = new Scanner (System.in);
+System.out.print("Enter Name: ");
+s1 = st.nextLine();
+System.out.print("Enter Phone: ");
+s2 = st.nextLine();
+System.out.print("Enter Address: ");
+s3 = st.nextLine();
+OutputStream fos = new FileOutputStream("test.txt")
+byte b1[] = s1.getBytes();
+fos.write(b1);
+byte b2[] = s2.getBytes();
+fos.write(b2);
+byte b3[] = s3.getBytes();
+fos.write(b3);
+fos.close();
+System.out.println("File Created ");
+// read from mno.txt file
+}
+} 
+</code></pre>
+
+
+<h4>Program 25: Design a AWT program to print the factorial for an
+input value.
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+
+import java.awt.*;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowListener;
+import java.awt.event.ActionEvent;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowAdapter;
+public class pract25 extends Frame implements ActionListener
+{
+Label l1,l2;
+TextField t1,t2;
+Button b1,b2;
+public pract25()
+{
+//addWindowListener(this);
+t1=new TextField(3);
+t2=new TextField(10);
+b1=new Button(&quot;Factorial&quot;);
+b2=new Button(&quot;Clear&quot;);
+l1=new Label(&quot;Enter Number: &quot;);
+l2=new Label(&quot;Result&quot;);
+setLayout(new GridLayout(3,2));
+add(l1);
+add(t1);
+add(l2);
+add(t2);
+add(b1);
+add(b2);
+setSize(200,200);
+setVisible(true);
+b1.addActionListener(this);
+b2.addActionListener(this);
+addWindowListener(new WindowAdapter()
+{
+public void windowClosing(WindowEvent we)
+{
+System.exit(0);
+}
+});
+}
+public static void main(String[] args)
+{
+new pract25();
+}
+public void actionPerformed(ActionEvent e)
+{
+if(e.getSource()==b1)
+{
+int num,fact,i;String result;
+fact=1;
+num=Integer.parseInt(t1.getText());
+for(i=1;i&lt;=num;i++)
+{
+fact=fact*i;
+}
+result=String.valueOf(fact);
+t2.setText(result);
+}
+else
+{
+t1.setText(&quot; &quot;);
+t2.setText(&quot; &quot;);
+}
+}
+}
+</code></pre>
+<h4>Program 27: Design an AWT program to various string opertions like
+reverse string, string concatenation etc.
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+class pract27 extends Frame implements ActionListener
+{
+Label l1,l2,l3;
+Button b1,b2,b3,b4;
+TextField t1,t2,t3;
+public pract27()
+{
+l1=new Label("1st String: ");
+l2=new Label("2nd String: ");
+l3=new Label("Result");
+b1=new Button("Reverse for 1st");
+b2=new Button("Concat 1st+2nd");
+b3=new Button("Clear");
+b4=new Button("Length for 1st");
+t1=new TextField(10);
+t2=new TextField(10);
+t3=new TextField(10);
+setLayout(new GridLayout(5,2));
+add(l1);
+add(t1);
+add(l2);
+add(t2);
+add(l3);
+add(t3);
+add(b1);
+add(b2);
+add(b3);
+add(b4);
+b1.addActionListener(this);
+b2.addActionListener(this);
+b3.addActionListener(this);
+b4.addActionListener(this);
+setSize(300,300);
+setVisible(true);
+addWindowListener(new WindowAdapter()
+{
+public void windowClosing(WindowEvent we)
+{
+System.exit(0);
+}
+});
+}
+public static void main(String[] ar)
+{
+new pract27();
+}
+public void actionPerformed(ActionEvent e)
+{
+String result;
+StringBuilder str;
+if(e.getSource()==b1)
+{
+str=new StringBuilder(); str.append(t1.getText());
+str.reverse();
+t3.setText(str.toString());
+}
+else if(e.getSource()==b2)
+{
+result=(t1.getText()).concat(t2.getText());
+t3.setText(result);
+}
+else if(e.getSource()==b3)
+{
+t1.setText("");
+t2.setText("");
+t3.setText("");
+}
+else
+{
+str=new StringBuilder();
+str.append(t1.getText());
+int a=str.length();
+t3.setText(String.valueOf(a));
+}
+}
+}
+</code></pre>
+<h4>Program 28: Write a java program to implement exception
+handling.
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+
+class pract28
+{
+public static void main(String s[])
+{
+int a[] = {5,10};
+int b=5;
+try
+{
+int x=a[2]/(b-a[0]);
+}
+catch (ArithmeticException e)
+{
+System.out.println("div by zero");
+}
+catch(ArrayIndexOutOfBoundsException e)
+{
+System.out.println("Array Error");
+}
+int y=a[1]/a[0];
+System.out.println(y);
+}
+}
+</code></pre>
+<h4>Program 29: Design an AWT application that contains the
+interface to add student information and display the same.
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+class pract29 extends Frame implements ActionListener
+{
+Label l1,l2,l3,l4,l5;
+Button b1,b2,b3,b4;
+TextField t1,t2,t3;
+public pract29()
+{
+l1=new Label("Name");
+l2=new Label("Phone");
+l3=new Label("Address");
+l4=new Label("Result");
+l5= new Label("");
+b1=new Button("Submit");
+b2=new Button("Clear");
+t1=new TextField(10);
+t2=new TextField(10);
+t3=new TextField(10);
+setLayout(new GridLayout(5,2));
+add(l1);
+add(t1);
+add(l2);
+add(t2);
+add(l3);
+add(t3);
+add(b1);
+add(b2);
+add(l4);
+add(l5);
+b1.addActionListener(this);
+b2.addActionListener(this);
+setSize(300,300);
+setVisible(true);
+addWindowListener(new WindowAdapter()
+{
+public void windowClosing(WindowEvent we)
+{
+System.exit(0);
+}
+});
+}
+public static void main(String[] ar)
+{
+new pract29();
+}
+public void actionPerformed(ActionEvent e)
+{
+if(e.getSource()==b1)
+{
+String data = "Student name:"+t1.getText();
+l4.setText(data);
+String
+data1="phone:"+t2.getText()+"address"+t3.getText();
+l5.setText(data1);
+}
+else if(e.getSource()==b3)
+{
+t1.setText("");
+t2.setText("");
+t3.setText("");
+l4.setText("");
+l5.setText("");
+}
+}
+}
+</code></pre>
+<h4>Program 30: Design a calculator based on AWT application.
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+class pract30 implements ActionListener
+{
+Frame f= new Frame();
+Label l1=new Label("First numnber:");
+Label l2=new Label("Second Number:");
+Label l3=new Label("Result");
+TextField t1= new TextField();
+TextField t2= new TextField();
+TextField t3= new TextField();
+Button b1=new Button("Add");
+Button b2=new Button("Sub");
+Button b3=new Button("Mul");
+Button b4=new Button("Div");
+Button b5=new Button("Clear");
+public pract30()
+{
+l1.setBounds(50,100,100,20);
+l2.setBounds(50,140,100,20);
+l3.setBounds(50,180,100,20);
+t1.setBounds(200,100,100,20);
+t2.setBounds(200,140,100,20);
+t3.setBounds(200,180,100,20);
+b1.setBounds(50,250,50,20);
+b2.setBounds(110,250,50,20);
+b3.setBounds(170,250,50,20);
+b4.setBounds(230,250,50,20);
+b5.setBounds(290,250,50,20);
+//adding components to the frame
+// setLayout(new GridLayout(5,2));
+f.add(l1);
+f.add(l2);
+f.add(l3);
+f.add(t1);
+f.add(t2);
+f.add(t3);
+f.add(b1);
+f.add(b2);
+f.add(b3);
+f.add(b4);
+f.add(b5);
+b1.addActionListener(this);
+b2.addActionListener(this);
+b3.addActionListener(this);
+b4.addActionListener(this);
+b5.addActionListener(this);
+f.setLayout(null);
+f.setSize(400,350);
+f.setVisible(true);
+f.addWindowListener(new WindowAdapter()
+{
+public void windowClosing(WindowEvent we)
+{
+System.exit(0);
+}
+});
+}
+public void actionPerformed(ActionEvent e)
+{
+int n1= Integer.parseInt(t1.getText());
+int n2= Integer.parseInt(t2.getText());
+if(e.getSource()==b1)
+{
+t3.setText(String.valueOf(n1+n2));
+}
+if(e.getSource()==b2)
+{
+t3.setText(String.valueOf(n1-n2));
+}
+if(e.getSource()==b3)
+{
+t3.setText(String.valueOf(n1*n2));
+}
+if(e.getSource()==b4)
+{
+t3.setText(String.valueOf(n1*n2));
+}
+if(e.getSource()==b5)
+{
+t1.setText("");
+t2.setText("");
+t3.setText("");
+}
+}
+public static void main(String[] ar)
+{
+new pract30();
+}
+}
+</code></pre>
+<h4>Program 31: Design an AWT application to generate result
+marksheet..
+  </h4>
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+class pract31 extends Frame implements ActionListener
+{
+Label l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11;
+Button b1,b2;
+TextField t1,t2,t3,t4,t5,t6,t7;
+Checkbox cb1,cb2;
+public pract31()
+{
+l1= new Label("Roll No");
+l2= new Label("Name:");
+l3= new Label("Sub1 Marks:");
+l4= new Label("Sub2 Marks:");
+l5 =new Label("Sub3 Marks:");
+l6= new Label("Total: ");
+l7= new Label("Perccentage:");
+l8= new Label("");
+l9= new Label("");
+l10= new Label("");
+l11= new Label("");
+CheckboxGroup cbg1 = new CheckboxGroup();
+cb1= new Checkbox("Male",cbg1,false);
+cb2= new Checkbox("Female",cbg1,false);
+//adding components to the frame
+b1 = new Button("Submit");
+b2 = new Button("Clear");
+t1= new TextField(10);
+t2= new TextField(10);
+t3= new TextField(10);
+t4= new TextField(10);
+t5= new TextField(10);
+t6= new TextField(10);
+t7= new TextField(10);
+setLayout(new GridLayout(11,2));
+add(l1);
+add(t1);
+add(l2);
+add(t2);
+add(cb1);
+add(cb2);
+add(l3);
+add(t3);
+add(l4);
+add(t4);
+add(l5);
+add(t5);
+add(l6);
+add(t6);
+add(l7);
+add(t7);
+add(b1);
+add(b2);
+add(l8);
+add(l9);
+add(l10);
+add(l11);
+b1.addActionListener(this);
+b2.addActionListener(this);
+setSize(300,300);
+setVisible(true);
+addWindowListener(new WindowAdapter()
+{
+public void windowClosing(WindowEvent we)
+{
+System.exit(0);
+}
+});
+}
+public static void main(String[] ar)
+{
+new pract31();
+}
+public void actionPerformed(ActionEvent e)
+{
+if(e.getSource()==b1)
+{
+int sub1= Integer.parseInt(t3.getText());
+int sub2= Integer.parseInt(t4.getText());
+int sub3= Integer.parseInt(t5.getText());
+int sum = sub1+sub2+sub3;
+float per=sum/3;
+t6.setText(String.valueOf(sum));
+t7.setText(String.valueOf(per));
+String data = "Roll No:"+ t1.getText();
+l8.setText(data);
+String data1 = "Name:"+ t2.getText();
+l9.setText(data1);
+String data2 = "Sub1:"+ t3.getText()+ "Sub2:"+ t4.getText()+
+"sub3:"+t4.getText();
+l10.setText(data2);
+String data3 = "Total:"+ t6.getText()+ "Per:"+ t7.getText();
+l11.setText(data3);
+}
+else
+{
+t1.setText("");
+t2.setText("");
+t3.setText("");
+t4.setText("");
+t5.setText("");
+t6.setText("");
+t7.setText("");
+cb1.setState(false);
+}
+}
+}
+</code></pre>
+
+
+
+
+  
+</body>
+</html>
