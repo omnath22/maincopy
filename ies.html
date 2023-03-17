@@ -132,32 +132,32 @@
 data-prismjs-copy="Сopy"
 data-prismjs-copy-success="Copied" >
 #include&lt;reg52.h&gt;
-    sbit LED = P2^0;
-    void Delay(void);
-    void main(void)
-    {
-     while(1)
-     {
-     LED = 0;
-     Delay();
-     LED = 1;
-     Delay();
-     }
-    }
-    void Delay(void)
-    {
-     int j;
-     int i;
-     for(i = 0; i &lt; 10; i++)
-     {
-     for(j = 0; j &lt; 10000; j++)
-     {
-     }
-     }
-    }
-    
+sbit LED = P2^0;
+void Delay(void);
+void main(void)
+{
+while(1)
+{
+LED = 0;
+Delay();
+LED = 1;
+Delay();
+}
+}
+void Delay(void)
+{
+int j;
+int i;
+for(i = 0; i &lt; 10; i++)
+{
+for(j = 0; j &lt; 10000; j++)
+{
+}
+}
+}
+
 </code></pre>
-<h3>Configure timer control registers of 8051 and develop a program to
+<h3>2 - Configure timer control registers of 8051 and develop a program to
     generate given time delay. 
     </h3>
 
@@ -166,32 +166,32 @@ data-prismjs-copy-success="Copied" >
 data-prismjs-copy="Сopy"
 data-prismjs-copy-success="Copied" >
 #include&lt;reg51.h&gt;
-    void Delay(void);
-    void main(void)
-    {
-     while(1)
-     {
-     P1 = 0xFF; // Make all bits of P1 high
-     Delay();
-     P1 = 0x00; // Make all bits of P1 low
-     Delay();
-     }
-    }
-    void Delay(void)
-    {
-     int j;
-     int i;
-     for(i = 0; i &lt; 1000; i++)
-     {
-     }
-     for(j = 0; j &lt; 1000; j++)
-     {
-     }
-    }
-    
+void Delay(void);
+void main(void)
+{
+while(1)
+{
+P1 = 0xFF; // Make all bits of P1 high
+Delay();
+P1 = 0x00; // Make all bits of P1 low
+Delay();
+}
+}
+void Delay(void)
+{
+int j;
+int i;
+for(i = 0; i &lt; 1000; i++)
+{
+}
+for(j = 0; j &lt; 1000; j++)
+{
+}
+}
+
 </code></pre>
-<h3>To demonstrate use of general purpose port i.e. Input/ output port of two
-    controllers for data transfer between them. </h3>
+<h3>3 - To demonstrate use of general purpose port i.e. Input/ output port of two
+controllers for data transfer between them. </h3>
 
 
 <pre><code class="language-html"
@@ -199,22 +199,22 @@ data-prismjs-copy="Сopy"
 data-prismjs-copy-success="Copied" >
 //code(1):
 #include&lt;reg51.h&gt;
-    void Delay(unsigned int time);
-    void main(void)
-    {
-    P2 = 0xAA;
-    Delay(1000);
-    P2 = 0x55;
-    Delay(1000);
-    }
-    void Delay(unsigned int time)
-    {
-    unsigned int i,j;
-    for (i = 0; i &lt; time; i++){
-    for (j = 0; j &lt; 23; j++){
-    }
-    }
-    }
+void Delay(unsigned int time);
+void main(void)
+{
+P2 = 0xAA;
+Delay(1000);
+P2 = 0x55;
+Delay(1000);
+}
+void Delay(unsigned int time)
+{
+unsigned int i,j;
+for (i = 0; i &lt; time; i++){
+for (j = 0; j &lt; 23; j++){
+}
+}
+}
 </code></pre>  
 
 
@@ -240,243 +240,65 @@ for (j = 0; j &lt; 23; j++){
 }
 }
 </code></pre>
-  <h3>Port I / O: Use one of the four ports of 8051 for O/P interfaced to eight
-    LED’s. Simulate binary counter (8 bit) on LED’s </h3>
+<h3>4 - Port I / O: Use one of the four ports of 8051 for O/P interfaced to eight
+LED’s. Simulate binary counter (8 bit) on LED’s </h3>
 
 
 <pre><code class="language-html"
 data-prismjs-copy="Сopy"
 data-prismjs-copy-success="Copied" >
 #include&lt;reg51.h>
-    void delay(int time);
-    void main()
-    {
-    P1 = 00000000;
-    while(1)
-    {
-    P1++;
-    delay(100);
-    }
-    }
-    void delay(int time)
-    {
-    int i, j;
-    for(i = 0; i &lt;= time; i++)
-    {
-    for(j = 0; j &lt;= 23; j++)
-    {
-    }
-    }
-    }
+void delay(int time);
+void main()
+{
+P1 = 00000000;
+while(1)
+{
+P1++;
+delay(100);
+}
+}
+void delay(int time)
+{
+int i, j;
+for(i = 0; i &lt;= time; i++)
+{
+for(j = 0; j &lt;= 23; j++)
+{
+}
+}
+}
 </code></pre> 
- <h3>To interface 8 LEDs at Input-output port and create different patterns. </h3>
+<h3>5 - To interface 8 LEDs at Input-output port and create different patterns. </h3>
 
 
 <pre><code class="language-html"
 data-prismjs-copy="Сopy"
 data-prismjs-copy-success="Copied" >
 #include&lt;reg51.h&gt;
-    void delay();
-    void main()
-    {
-    while(1)
-    {
-    P1 = 0xAA; // Pattern to turn on alternate LEDs - 10101010
-    delay();
-    P1 = 0x55; // Reverse the pattern
-    delay();
-    }
-    }
-    void delay()
-    {
-    unsigned int i, j;
-    for(i = 0; i &lt;23; i++)
-    {
-    for(j = 0; j &lt;1000; j++)
-    {
-    }
-    }
-    }
-</code></pre>  <h3>To demonstrate timer working in timer mode and blink LED without
-    using any loop delay routine. 
-    </h3>
-
-
-<pre><code class="language-html"
-data-prismjs-copy="Сopy"
-data-prismjs-copy-success="Copied" >
-#include&lt;reg51.h&gt;
-    int i = 0;
-    void timer_ISR(void)interrupt 1
-    {
-    i++;
-    if(i == 10)
-    {
-    i=0;
-    P1++;
-    }
-    }
-    void main(void)
-    {
-    TMOD = 0x01;
-    ET0 = 1;
-    TR0 = 1;
-    EA = 1;
-    while(1);
-    }
-</code></pre>  <h3>Serial I / O: Configure 8051 serial port for asynchronous serial
-    communication with serial port of PC exchange text messages to PC and
-    display on PC screen. Signify end of message by carriage return. </h3>
-
-
-<pre><code class="language-html"
-data-prismjs-copy="Сopy"
-data-prismjs-copy-success="Copied" >
-#include&lt;reg51.h&gt;
-    void send(char x);
-    void main(void)
-    {
-    TMOD = 0x20;
-    TH1 = 0xFD;
-    SCON = 0x50;
-    TR1 = 1;
-    send('V');
-    send('A');
-    send('L');
-    send('I');
-    send('A');
-    send('S');
-    send('Y');
-    send('I');
-     send('T');
-    while(1);
-    }
-    void send(char x)
-    {
-    SBUF = x;
-    while(TI == 0);
-    TI = 0;
-    }
-</code></pre>
-<h3>To demonstrate interfacing of seven-segment LED display and generate
-    counting from 0 to 99 with fixed time delay. </h3>
-
-
-<pre><code class="language-html"
-data-prismjs-copy="Сopy"
-data-prismjs-copy-success="Copied" >
-#include&lt;reg51.h&gt;
-    void delay(unsigned int ms)
-    {
-    unsigned int i, j;
-    for(i = 0; i&lt;ms; i++)
-    {
-    for(j = 0; j&lt;=1275; j++)
-    {
-    }
-    }
-    }
-    void main(void)
-    {
-    char number[] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07,
-    0x7F, 0x6F};
-    int i, j;
-    P2 = 0x00;
-    P3 = 0x00;
-    while(1)
-    {
-    for(i = 0; i&lt;=9; i++)
-    {
-    P2 = number[i];
-    for(j = 0; j&lt;=9; j++)
-    {
-    P3 = number[j];
-    delay(50);
-    }
-    }
-    }
-    }
-</code></pre>
-<h3>Interface 8051 with D/A converter and generate triangular wave of given
-    frequency on oscilloscope.
-    </h3>
-
-
-<pre><code class="language-html"
-data-prismjs-copy="Сopy"
-data-prismjs-copy-success="Copied" >
-: #include&lt;reg51.h&gt;
-    void main()
-    {
-    P2= 0x00;
-    while(1)
-    {
-    do
-    {
-    P2 += 0x05;
-    }
-    while(P2 &;t; 0xFF);
-    do
-    {
-    P2 -= 0x05;
-    }
-    while(P2 > 0x00);
-    }
-    }
-</code></pre>  <h3>Using D/A converter generate sine wave on oscilloscope with the help of lookup
-    table stored in data area of 8051.</h3>
-
-
-<pre><code class="language-html"
-data-prismjs-copy="Сopy"
-data-prismjs-copy-success="Copied" >
-#include&lt;reg51.h&gt;
-    #include<stdio.h>
-    int sine[]={0,0,5,10,5,15,20,25,30,35,40,45,45,40,35,30,25,20,15,10,5,0,0};
-    void main()
-    {
-    int i;
-    P1=0x00;
-    while(1)
-    {
-    for(i=0;i&lt;23;i++)
-    {
-    P1=sine[i];
-    }
-    }
-    }
-</code></pre>  <h3>Prac 6 interface stepper motor with 8051 and write a program to move motor</h3>
-
-
-<pre><code class="language-html"
-data-prismjs-copy="Сopy"
-data-prismjs-copy-success="Copied" >
-#include&lt;reg51.h&gt;
-    void delay()
-    {
-    int i, j;
-    for(i = 0; i &lt;= 100; i++)
-    {
-    for(j = 0; j &lt; 100; j++)
-    {
-    }
-    }
-    }
-    void main()
-    {
-    while(1)
-    {
-    P2 = 0x09;
-    delay();
-    P2 = 0x03;
-    delay();
-    P2 = 0x06;
-    delay();
-    P2 = 0x0C;
-    delay();
-    }
-    }
-</code></pre>  <h3>Generate traffic signal.
+void delay();
+void main()
+{
+while(1)
+{
+P1 = 0xAA; // Pattern to turn on alternate LEDs - 10101010
+delay();
+P1 = 0x55; // Reverse the pattern
+delay();
+}
+}
+void delay()
+{
+unsigned int i, j;
+for(i = 0; i &lt;23; i++)
+{
+for(j = 0; j &lt;1000; j++)
+{
+}
+}
+}
+</code></pre>  <h3>6 - To demonstrate timer working in timer mode and blink LED without
+using any loop delay routine. 
 </h3>
 
 
@@ -484,39 +306,217 @@ data-prismjs-copy-success="Copied" >
 data-prismjs-copy="Сopy"
 data-prismjs-copy-success="Copied" >
 #include&lt;reg51.h&gt;
-    sbit red = P2^0;
-    sbit yellow = P2^1;
-    sbit green = P2^2;
-    void delay(int time);
-    void main()
-    {
-    red = yellow = green = 0;
-    while(1)
-    {
-    red = 1;
-    delay(1000);
-    red = 0;
-    yellow = 1;
-    delay(200);
-    yellow = 0;
-    green = 1;
-    delay(1000);
-    green = 0;
-    yellow = 1;
-    delay(200);
-    yellow = 0;
-    }
-    }
-    void delay(int time)
-    {
-    int i, j;
-    for(i = 0; i &lt; time; i++)
-    {
-    for(j = 0; j &lt; 1000; j++)
-    {
-    }
-    }
-    }
+int i = 0;
+void timer_ISR(void)interrupt 1
+{
+i++;
+if(i == 10)
+{
+i=0;
+P1++;
+}
+}
+void main(void)
+{
+TMOD = 0x01;
+ET0 = 1;
+TR0 = 1;
+EA = 1;
+while(1);
+}
+</code></pre>  <h3>7 - Serial I / O: Configure 8051 serial port for asynchronous serial
+communication with serial port of PC exchange text messages to PC and
+display on PC screen. Signify end of message by carriage return. </h3>
+
+
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+#include&lt;reg51.h&gt;
+void send(char x);
+void main(void)
+{
+TMOD = 0x20;
+TH1 = 0xFD;
+SCON = 0x50;
+TR1 = 1;
+send('V');
+send('A');
+send('L');
+send('I');
+send('A');
+send('S');
+send('Y');
+send('I');
+send('T');
+while(1);
+}
+void send(char x)
+{
+SBUF = x;
+while(TI == 0);
+TI = 0;
+}
+</code></pre>
+<h3>8 - To demonstrate interfacing of seven-segment LED display and generate
+counting from 0 to 99 with fixed time delay. </h3>
+
+
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+#include&lt;reg51.h&gt;
+void delay(unsigned int ms)
+{
+unsigned int i, j;
+for(i = 0; i&lt;ms; i++)
+{
+for(j = 0; j&lt;=1275; j++)
+{
+}
+}
+}
+void main(void)
+{
+char number[] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07,
+0x7F, 0x6F};
+int i, j;
+P2 = 0x00;
+P3 = 0x00;
+while(1)
+{
+for(i = 0; i&lt;=9; i++)
+{
+P2 = number[i];
+for(j = 0; j&lt;=9; j++)
+{
+P3 = number[j];
+delay(50);
+}
+}
+}
+}
+</code></pre>
+<h3>9 - Interface 8051 with D/A converter and generate triangular wave of given
+frequency on oscilloscope.
+</h3>
+
+
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+: #include&lt;reg51.h&gt;
+void main()
+{
+P2= 0x00;
+while(1)
+{
+do
+{
+P2 += 0x05;
+}
+while(P2 &;t; 0xFF);
+do
+{
+P2 -= 0x05;
+}
+while(P2 > 0x00);
+}
+}
+</code></pre>  <h3>10 - Using D/A converter generate sine wave on oscilloscope with the help of lookup
+table stored in data area of 8051.</h3>
+
+
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+#include&lt;reg51.h&gt;
+#include<stdio.h>
+int sine[]={0,0,5,10,5,15,20,25,30,35,40,45,45,40,35,30,25,20,15,10,5,0,0};
+void main()
+{
+int i;
+P1=0x00;
+while(1)
+{
+for(i=0;i&lt;23;i++)
+{
+P1=sine[i];
+}
+}
+}
+</code></pre>  <h3>11 - Prac 6 interface stepper motor with 8051 and write a program to move motor</h3>
+
+
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+#include&lt;reg51.h&gt;
+void delay()
+{
+int i, j;
+for(i = 0; i &lt;= 100; i++)
+{
+for(j = 0; j &lt; 100; j++)
+{
+}
+}
+}
+void main()
+{
+while(1)
+{
+P2 = 0x09;
+delay();
+P2 = 0x03;
+delay();
+P2 = 0x06;
+delay();
+P2 = 0x0C;
+delay();
+}
+}
+</code></pre>  <h3>12 - Generate traffic signal.
+</h3>
+
+
+<pre><code class="language-html"
+data-prismjs-copy="Сopy"
+data-prismjs-copy-success="Copied" >
+#include&lt;reg51.h&gt;
+sbit red = P2^0;
+sbit yellow = P2^1;
+sbit green = P2^2;
+void delay(int time);
+void main()
+{
+red = yellow = green = 0;
+while(1)
+{
+red = 1;
+delay(1000);
+red = 0;
+yellow = 1;
+delay(200);
+yellow = 0;
+green = 1;
+delay(1000);
+green = 0;
+yellow = 1;
+delay(200);
+yellow = 0;
+}
+}
+void delay(int time)
+{
+int i, j;
+for(i = 0; i &lt; time; i++)
+{
+for(j = 0; j &lt; 1000; j++)
+{
+}
+}
+}
 </code></pre> 
 
   
